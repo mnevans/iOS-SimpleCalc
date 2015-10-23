@@ -1,14 +1,14 @@
 //
-//  simple_calcUITests.swift
-//  simple-calcUITests
+//  iOS_SimpleCalcUITests.swift
+//  iOS-SimpleCalcUITests
 //
-//  Created by Morgan Evans on 10/22/15.
+//  Created by iGuest on 10/22/15.
 //  Copyright © 2015 Morgan Evans. All rights reserved.
 //
 
 import XCTest
 
-class simple_calcUITests: XCTestCase {
+class iOS_SimpleCalcUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

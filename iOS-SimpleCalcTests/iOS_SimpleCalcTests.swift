@@ -1,15 +1,15 @@
 //
-//  simple_calcTests.swift
-//  simple-calcTests
+//  iOS_SimpleCalcTests.swift
+//  iOS-SimpleCalcTests
 //
-//  Created by Morgan Evans on 10/22/15.
+//  Created by iGuest on 10/22/15.
 //  Copyright © 2015 Morgan Evans. All rights reserved.
 //
 
 import XCTest
-@testable import simple_calc
+@testable import iOS_SimpleCalc
 
-class simple_calcTests: XCTestCase {
+class iOS_SimpleCalcTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

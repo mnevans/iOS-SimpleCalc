@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>simple-calc.xcscheme</key>
+		<key>iOS-SimpleCalc.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2061D4901BD93A5200FD90A3</key>
+		<key>9D4CAC551BD9D519002480EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2061D4A41BD93A5500FD90A3</key>
+		<key>9D4CAC691BD9D519002480EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2061D4AF1BD93A5500FD90A3</key>
+		<key>9D4CAC741BD9D519002480EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
