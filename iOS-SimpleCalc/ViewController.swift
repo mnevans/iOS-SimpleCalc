@@ -41,26 +41,6 @@ class ViewController: UIViewController {
         output.text = operation
     }
     
-    @IBAction func equalsPressed(sender: UIButton) {
-        typingFirstNum = true
-        typingSecondNum = false
-        firstNum = Int(firstNumString)!
-        if secondNumString != "" {
-            secondNum = Int(secondNumString)!
-        }
-        if typingMultiOp {
-            input.append(firstNum)
-        }
-        calculate()
-        firstNum = 0
-        secondNum = 0
-        firstNumString = ""
-        secondNumString = ""
-        operation = ""
-        input.removeAll()
-        typingMultiOp = false
-    }
-    
     @IBAction func multiOp(sender: UIButton) {
         typingMultiOp = true
         operation = sender.currentTitle!
@@ -87,6 +67,26 @@ class ViewController: UIViewController {
             break
         }
     }
+    
+    @IBAction func equalsPressed(sender: UIButton) {
+        typingFirstNum = true
+        typingSecondNum = false
+        firstNum = Int(firstNumString)!
+        if secondNumString != "" {
+            secondNum = Int(secondNumString)!
+        }
+        if typingMultiOp {
+            input.append(firstNum)
+        }
+        calculate()
+        firstNum = 0
+        secondNum = 0
+        firstNumString = ""
+        secondNumString = ""
+        operation = ""
+        input.removeAll()
+        typingMultiOp = false
+    }
 
 func calculate() -> Void {
     switch operation {
@@ -111,23 +111,13 @@ func calculate() -> Void {
         output.text = "\(avg)"
     case "fact":
         var factorial = 1
-        for var i = 0; i < firstNum; i++ {
+        for var i = 1; i < firstNum; i++ {
             factorial *= i
         }
         output.text = "\(factorial)"
     default:
         "Please enter an appropriate expression to calculate."
     }
-    
 }
-/*
-override func viewDidLoad() {
-super.viewDidLoad()
-// Do any additional setup after loading the view, typically from a nib.
-}
-override func didReceiveMemoryWarning() {
-super.didReceiveMemoryWarning()
-// Dispose of any resources that can be recreated.
-}*/
 
 }
