@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     var typingMultiOp : Bool = false
     var input : [Int] = [Int]()
 
+    // display the specified calculator number
     @IBAction func numberPressed(sender: UIButton) {
         if typingFirstNum {
             firstNumString += sender.currentTitle!
@@ -31,7 +32,8 @@ class ViewController: UIViewController {
             output.text = secondNumString
         }
     }
-
+    
+    // display the specified operand
     @IBAction func operand(sender: UIButton) {
         if typingFirstNum {
             typingFirstNum = false
@@ -41,6 +43,7 @@ class ViewController: UIViewController {
         output.text = operation
     }
     
+    // display the specified special expression and add it to the array to be calculated
     @IBAction func multiOp(sender: UIButton) {
         typingMultiOp = true
         operation = sender.currentTitle!
@@ -68,6 +71,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // finalize the provided numbers and operations to display and restart the program
     @IBAction func equalsPressed(sender: UIButton) {
         typingFirstNum = true
         typingSecondNum = false
@@ -87,37 +91,37 @@ class ViewController: UIViewController {
         input.removeAll()
         typingMultiOp = false
     }
-
-func calculate() -> Void {
-    switch operation {
-    case "+":
-        output.text = "\(firstNum + secondNum)"
-    case "-":
-        output.text = "\(firstNum - secondNum)"
-    case "*":
-        output.text = "\(firstNum * secondNum)"
-    case "/":
-        output.text = "\(firstNum / secondNum)"
-    case "%":
-        output.text = "\(firstNum % secondNum)"
-    case "count":
-        output.text = "\(input.count)"
-    case "avg":
-        var sum = 0
-        for var i = 0; i < input.count; i++ {
-            sum += input[i]
+    
+    // calculate the provided numbers or expressions and operations
+    func calculate() -> Void {
+        switch operation {
+        case "+":
+            output.text = "\(firstNum + secondNum)"
+        case "-":
+            output.text = "\(firstNum - secondNum)"
+        case "*":
+            output.text = "\(firstNum * secondNum)"
+        case "/":
+            output.text = "\(firstNum / secondNum)"
+        case "%":
+            output.text = "\(firstNum % secondNum)"
+        case "count":
+            output.text = "\(input.count)"
+        case "avg":
+            var sum = 0
+            for var i = 0; i < input.count; i++ {
+                sum += input[i]
+            }
+            let avg = Float(sum) / Float(input.count)
+            output.text = "\(avg)"
+        case "fact":
+            var factorial = 1
+            for var i = 1; i < firstNum; i++ {
+                factorial *= i
+            }
+            output.text = "\(factorial)"
+        default:
+            "Please enter an appropriate expression to calculate."
         }
-        let avg = Float(sum) / Float(input.count)
-        output.text = "\(avg)"
-    case "fact":
-        var factorial = 1
-        for var i = 1; i < firstNum; i++ {
-            factorial *= i
-        }
-        output.text = "\(factorial)"
-    default:
-        "Please enter an appropriate expression to calculate."
     }
-}
-
 }
