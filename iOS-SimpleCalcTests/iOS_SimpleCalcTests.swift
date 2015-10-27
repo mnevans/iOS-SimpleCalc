@@ -2,12 +2,12 @@
 //  iOS_SimpleCalcTests.swift
 //  iOS-SimpleCalcTests
 //
-//  Created by iGuest on 10/22/15.
-//  Copyright © 2015 Morgan Evans. All rights reserved.
+//  Created by iGuest on 10/27/15.
+//  Copyright (c) 2015 Morgan Evans. All rights reserved.
 //
 
+import UIKit
 import XCTest
-@testable import iOS_SimpleCalc
 
 class iOS_SimpleCalcTests: XCTestCase {
     
@@ -23,12 +23,12 @@ class iOS_SimpleCalcTests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssert(true, "Pass")
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock {
+        self.measureBlock() {
             // Put the code you want to measure the time of here.
         }
     }

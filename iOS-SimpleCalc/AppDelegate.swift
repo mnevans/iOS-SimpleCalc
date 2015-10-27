@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  iOS-SimpleCalc
 //
-//  Created by iGuest on 10/22/15.
-//  Copyright © 2015 Morgan Evans. All rights reserved.
+//  Created by iGuest on 10/27/15.
+//  Copyright (c) 2015 Morgan Evans. All rights reserved.
 //
 
 import UIKit
