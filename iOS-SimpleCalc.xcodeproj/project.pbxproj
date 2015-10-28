@@ -79,8 +79,8 @@
 			children = (
 				9DD9BA3B1BE0337C00503E53 /* AppDelegate.swift */,
 				9DD9BA3D1BE0337C00503E53 /* ViewController.swift */,
-				9DD9BA3F1BE0337C00503E53 /* Main.storyboard */,
 				9DD9BA421BE0337C00503E53 /* Images.xcassets */,
+				9DD9BA3F1BE0337C00503E53 /* Main.storyboard */,
 				9DD9BA441BE0337C00503E53 /* LaunchScreen.xib */,
 				9DD9BA391BE0337C00503E53 /* Supporting Files */,
 			);
@@ -411,6 +411,7 @@
 				9DD9BA571BE0337C00503E53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9DD9BA581BE0337C00503E53 /* Build configuration list for PBXNativeTarget "iOS-SimpleCalcTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +420,7 @@
 				9DD9BA5A1BE0337C00503E53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

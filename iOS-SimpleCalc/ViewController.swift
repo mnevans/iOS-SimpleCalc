@@ -34,6 +34,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // display the specified operand
     @IBAction func operand(sender: UIButton) {
         if typingFirstNum {
             typingFirstNum = false
@@ -50,18 +51,18 @@ class ViewController: UIViewController {
         
         switch operation {
         case "count":
-            firstNum = Int(firstNumString)!
+            firstNum = firstNumString.toInt()!
             input.append(firstNum)
             firstNumString = ""
             output.text = "count"
         case "avg":
-            firstNum = Int(firstNumString)!
+            firstNum = firstNumString.toInt()!
             input.append(firstNum)
             firstNumString = ""
             output.text = "avg"
         case "fact":
             output.text = "fact"
-            firstNum = Int(firstNumString)!
+            firstNum = firstNumString.toInt()!
             firstNumString = ""
             calculate()
             firstNum = 0
@@ -75,9 +76,9 @@ class ViewController: UIViewController {
     @IBAction func equalsPressed(sender: UIButton) {
         typingFirstNum = true
         typingSecondNum = false
-        firstNum = Int(firstNumString)!
+        firstNum = firstNumString.toInt()!
         if secondNumString != "" {
-            secondNum = Int(secondNumString)!
+            secondNum = secondNumString.toInt()!
         }
         if typingMultiOp {
             input.append(firstNum)
@@ -116,7 +117,7 @@ class ViewController: UIViewController {
             output.text = "\(avg)"
         case "fact":
             var factorial = 1
-            for var i = 1; i < firstNum; i++ {
+            for var i = 1; i <= firstNum; i++ {
                 factorial *= i
             }
             output.text = "\(factorial)"
