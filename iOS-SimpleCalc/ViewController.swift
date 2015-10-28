@@ -51,18 +51,18 @@ class ViewController: UIViewController {
         
         switch operation {
         case "count":
-            firstNum = firstNumString.toInt()!
+            firstNum = Int(firstNumString)!
             input.append(firstNum)
             firstNumString = ""
             output.text = "count"
         case "avg":
-            firstNum = firstNumString.toInt()!
+            firstNum = Int(firstNumString)!
             input.append(firstNum)
             firstNumString = ""
             output.text = "avg"
         case "fact":
             output.text = "fact"
-            firstNum = firstNumString.toInt()!
+            firstNum = Int(firstNumString)!
             firstNumString = ""
             calculate()
             firstNum = 0
@@ -76,9 +76,9 @@ class ViewController: UIViewController {
     @IBAction func equalsPressed(sender: UIButton) {
         typingFirstNum = true
         typingSecondNum = false
-        firstNum = firstNumString.toInt()!
+        firstNum = Int(firstNumString)!
         if secondNumString != "" {
-            secondNum = secondNumString.toInt()!
+            secondNum = Int(secondNumString)!
         }
         if typingMultiOp {
             input.append(firstNum)
